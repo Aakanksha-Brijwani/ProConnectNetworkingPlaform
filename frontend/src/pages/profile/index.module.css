@@ -1,0 +1,784 @@
+/* 
+
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.heroCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.backdrop {
+  width: 100%;
+  height: 200px;
+  background-image: url("https://images.pexels.com/photos/33844001/pexels-photo-33844001.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.heroActions {
+
+  display:none;
+}
+
+.btnConnect {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnConnect:hover {
+  background: #004182;
+}
+
+.btnPending {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background: transparent;
+  color: #666;
+  font-size: 14px;
+  cursor: default;
+}
+
+.btnMore {
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid #0a66c2;
+  background: transparent;
+  color: #0a66c2;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnMore:hover {
+  background: #eaf0f9;
+}
+
+.heroInfo {
+  padding-top: 70px;
+}
+.heroInfo h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.username {
+  font-size: 14px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.headline {
+  font-size: 15px;
+  color: #333;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.sectionCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.activityGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.postItem {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.postThumb {
+  width: 72px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.postThumbEmpty {
+  background: #f3f2ef;
+}
+
+.postBody {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.workList {
+  width: fit-content;
+}
+
+.workItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.workIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #f3f2ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.workTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.workCompany {
+  font-size: 13px;
+  color: #444;
+  margin-top: 2px;
+}
+
+.workYears {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.btnConnect {
+  padding-inline:0.8rem;
+  padding-block:0.4rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+
+.heroBody {
+  position: relative;
+  min-height: 120px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.addWorkButton {
+  border-width: 1px;
+  border-style: dotted;
+  border-color: grey;
+  padding-inline: 1.3rem;
+  padding-block: 1.2rem;
+  background: white;
+}
+
+.avatarContainer {
+  position: absolute;
+  top: -60px;
+  left: 24px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+
+.heroInfo {
+  padding-top: 70px;
+  width: fit-content;
+}
+
+
+.nameEdit{
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  border: none;
+  outline: none;
+  width: fit-content;
+}
+
+.heroInfo textarea{
+  outline: none;
+  border: none;
+
+  padding-inline: 10px;
+  padding_block: 9px;
+  font-family: "Poppins" !important;
+  font-size: 1.1rem;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  display: block;
+}
+
+.avatarOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.avatarContainer:hover .avatarOverlay {
+  opacity: 1;
+}
+
+.avatarOverlay{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+}
+
+.avatarContainer:hover .avatarOverlay{
+    opacity:1;
+}
+
+
+.commentsContainer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.allComentContainer {
+  width: 40vw;
+  max-width: 600px;
+  min-width: 350px;
+  background: white;
+  border-radius: 10px;
+  padding: 1.4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputField{
+  padding-inline: 1.3rem;
+  padding-block: 0.8rem;
+  outline: none;
+  border-radius:10px;
+  border: 1px solid silver;
+  width: 100%;
+} */
+
+
+
+
+/* .container{
+    position: relative;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+   
+}
+
+.backDropContainer{
+    width: 100%;
+    height: 250px;
+    background-image: url("https://images.pexels.com/photos/33844001/pexels-photo-33844001.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.profilePicture{
+    position: absolute;
+    left: 40px;
+    top: 180px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+.profileContainer__details{
+    
+    padding-top: 90px;
+    padding-left: 40px;
+}
+
+.workHistoryContainer{
+    display: flex;
+}
+
+.workHistoryCard{
+    min-width: fit-content;
+
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(173,173,173);
+
+} */
+
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Hero card ── */
+.heroCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.backdrop {
+  width: 100%;
+  height: 200px;
+  background-image: url("https://images.pexels.com/photos/33844001/pexels-photo-33844001.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.heroActions {
+  /* display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 0.75rem;
+  min-height: 52px;    */
+  display:none;
+}
+
+.btnConnect {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnConnect:hover {
+  background: #004182;
+}
+
+.btnPending {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background: transparent;
+  color: #666;
+  font-size: 14px;
+  cursor: default;
+}
+
+.btnMore {
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid #0a66c2;
+  background: transparent;
+  color: #0a66c2;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnMore:hover {
+  background: #eaf0f9;
+}
+
+.heroInfo {
+  padding-top: 70px;
+}
+.heroInfo h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.username {
+  font-size: 14px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.headline {
+  font-size: 15px;
+  color: #333;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ── Shared section card ── */
+.sectionCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+/* ── Activity ── */
+.activityGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.postItem {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.postThumb {
+  width: 72px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.postThumbEmpty {
+  background: #f3f2ef;
+}
+
+.postBody {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Work history (LinkedIn-style "Experience" list) ── */
+.workList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.workItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.workItem:last-of-type {
+  border-bottom: none;
+}
+
+.workIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #f3f2ef;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  color: #666;
+}
+
+.workTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.3;
+}
+
+.workCompany {
+  font-size: 14px;
+  color: #000;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+.workYears {
+  font-size: 13px;
+  color: #666;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+.workDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteWorkButton {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+  line-height: 1;
+  align-self: flex-start;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+}
+
+.workItem:hover .deleteWorkButton {
+  opacity: 1;
+}
+
+.deleteWorkButton:hover {
+  background: #f3f2ef;
+  color: #b00020;
+}
+
+
+.btnConnect {
+  padding-inline:0.8rem;
+  padding-block:0.4rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+
+.heroBody {
+  position: relative;
+  min-height: 120px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.addWorkButton {
+  margin-top: 12px;
+  border: 1px solid #666;
+  border-style: solid;
+  border-radius: 20px;
+  padding-inline: 1.1rem;
+  padding-block: 0.5rem;
+  background: white;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-start;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.addWorkButton:hover {
+  background: #f3f2ef;
+  border-color: #000;
+  color: #000;
+}
+
+.avatarContainer {
+  position: absolute;
+  top: -60px;
+  left: 24px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+
+.heroInfo {
+  padding-top: 70px;
+  width: fit-content;
+}
+
+
+.nameEdit{
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  border: none;
+  outline: none;
+  width: fit-content;
+}
+
+.heroInfo textarea{
+  outline: none;
+  border: none;
+
+  padding-inline: 10px;
+  padding_block: 9px;
+  font-family: "Poppins" !important;
+  font-size: 1.1rem;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  display: block;
+}
+
+.avatarOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.avatarContainer:hover .avatarOverlay {
+  opacity: 1;
+}
+
+.avatarOverlay{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+}
+
+.avatarContainer:hover .avatarOverlay{
+    opacity:1;
+}
+
+
+.commentsContainer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.allComentContainer {
+  width: 40vw;
+  max-width: 600px;
+  min-width: 350px;
+  background: white;
+  border-radius: 10px;
+  padding: 1.4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputField{
+  padding-inline: 1.3rem;
+  padding-block: 0.8rem;
+  outline: none;
+  border-radius:10px;
+  border: 1px solid silver;
+  width: 100%;
+}
+
+.educationGrade {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.educationDescription {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}

@@ -1,0 +1,162 @@
+/* .userCard{
+    display: flex;
+    width: 100%;
+    gap: 1.2rem;
+    padding: 1.3rem;
+
+    align-items: center;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.1);
+}
+
+.profilePicture >img{
+    width: 6.5rem;
+    border-radius: 50%;
+}
+
+.myConnections{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+} */
+
+.connectionsContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d2226;
+    margin-bottom: 25px;
+}
+
+.userCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+
+    padding: 18px 22px;
+    margin-bottom: 18px;
+
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.userCard:hover {
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.profilePicture img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0a66c2;
+}
+
+.userInfo h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #191919;
+}
+
+.userInfo p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.userInfo span {
+    color: #777;
+    font-size: 14px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+}
+
+.acceptBtn {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.acceptBtn:hover {
+    background: #004182;
+}
+
+.ignoreBtn {
+    background: white;
+    color: #666;
+    border: 1px solid #999;
+    padding: 10px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.ignoreBtn:hover {
+    background: #f3f2ef;
+}
+
+@media (max-width: 768px) {
+    .userCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .buttonGroup {
+        width: 100%;
+    }
+
+    .acceptBtn,
+    .ignoreBtn {
+        flex: 1;
+    }
+
+    .profilePicture img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+.btnConnect {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnConnect:hover {
+  background: #004182;
+}

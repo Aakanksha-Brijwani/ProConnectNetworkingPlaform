@@ -1,79 +1,79 @@
-POST http://localhost:5001/register HTTP/1.1
-Content-Type: application/json
+# POST http://localhost:5001/register HTTP/1.1
+# Content-Type: application/json
 
-{
-  "username": "az",
-  "password": "123456",
-  "email": "az@gmail.com",
-  "name": "ayz"
-}
-###
+# {
+#   "username": "az",
+#   "password": "123456",
+#   "email": "az@gmail.com",
+#   "name": "ayz"
+# }
+# ###
 
-POST http://localhost:5001/login HTTP/1.1
-Content-Type: application/json
+# POST http://localhost:5001/login HTTP/1.1
+# Content-Type: application/json
 
-{
-    "email":"az@gmail.com",
-    "password":"123456"
-}           
+# {
+#     "email":"az@gmail.com",
+#     "password":"123456"
+# }           
 
-###
-POST http://localhost:5001/get_user_and_profile HTTP/1.1
-Content-Type: application/json
+# ###
+# POST http://localhost:5001/get_user_and_profile HTTP/1.1
+# Content-Type: application/json
 
-{
-    "token":"6f1db48d7793cc2e410235ec02a17bc309af8ae9d441553435020ebdfce48a64010820ee5c8a3392cf75ab3010a8a085bb0ee66ef3a8a051ca401cb1ee0f0de1"
-}           
+# {
+#     "token":"6f1db48d7793cc2e410235ec02a17bc309af8ae9d441553435020ebdfce48a64010820ee5c8a3392cf75ab3010a8a085bb0ee66ef3a8a051ca401cb1ee0f0de1"
+# }           
 
-###
-POST http://localhost:5001/update_profile_data HTTP/1.1
-Content-Type: application/json  
+# ###
+# POST http://localhost:5001/update_profile_data HTTP/1.1
+# Content-Type: application/json  
 
-{
-    "token":"6f1db48d7793cc2e410235ec02a17bc309af8ae9d441553435020ebdfce48a64010820ee5c8a3392cf75ab3010a8a085bb0ee66ef3a8a051ca401cb1ee0f0de1",
-    "bio": "Passionate software engineer with 5 years of experience in developing scalable web applications.",
-    "currentPost": "Software Engineer at XYZ Company",
-    "pastWork":[
-        {
-            "company": "ABC Corporation",
-            "position": "Software Developer",
-            "duration": "Jan 202  0 - Dec 2021"
-        } 
+# {
+#     "token":"6f1db48d7793cc2e410235ec02a17bc309af8ae9d441553435020ebdfce48a64010820ee5c8a3392cf75ab3010a8a085bb0ee66ef3a8a051ca401cb1ee0f0de1",
+#     "bio": "Passionate software engineer with 5 years of experience in developing scalable web applications.",
+#     "currentPost": "Software Engineer at XYZ Company",
+#     "pastWork":[
+#         {
+#             "company": "ABC Corporation",
+#             "position": "Software Developer",
+#             "duration": "Jan 202  0 - Dec 2021"
+#         } 
 
-    ] ,
-    "education":[
-        {
-            "school": "University of Example",
-            "degree": "Bachelor of Science in Computer Science",
-            "fieldOfStudy": "Computer Science"
-        }
-    ]
-} 
+#     ] ,
+#     "education":[
+#         {
+#             "school": "University of Example",
+#             "degree": "Bachelor of Science in Computer Science",
+#             "fieldOfStudy": "Computer Science"
+#         }
+#     ]
+# } 
 
-###
-GET http://localhost:5000/user/get_all_users HTTP/1.1   
+# ###
+# GET http://localhost:5000/user/get_all_users HTTP/1.1   
 
 
-###
-GET  http://localhost:5001/posts
-Content-Type: application/json
+# ###
+# GET  http://localhost:5001/posts
+# Content-Type: application/json
 
-{
-  "token": "6f1db48d7793cc2e410235ec02a17bc309af8ae9d441553435020ebdfce48a64010820ee5c8a3392cf75ab3010a8a085bb0ee66ef3a8a051ca401cb1ee0f0de1",
-  "body": "Hello World"
-}
+# {
+#   "token": "6f1db48d7793cc2e410235ec02a17bc309af8ae9d441553435020ebdfce48a64010820ee5c8a3392cf75ab3010a8a085bb0ee66ef3a8a051ca401cb1ee0f0de1",
+#   "body": "Hello World"
+# }
 
-###
-POST http://localhost:5001/add_education HTTP/1.1
-Content-Type: application/json  
+# ###
+# POST http://localhost:5001/add_education HTTP/1.1
+# Content-Type: application/json  
 
-{
-  "token": "3c4489be632beb1973bfde92cbc42a61540a7d6aae05569ca854aa8d59fd43cb6e5ddb70c3b95e271834ded946a1d9b58c793c19c27809b2c0725941ad2a4001",
-  "school": "MIT WPU",
-  "degree": "Master of Computer Applications",
-  "fieldOfStudy": "Computer Science",
-  "startDate": "2025-08-01",
-  "endDate": "2027-05-31",
-  "grade": "8.9 CGPA",
-  "description": "Focused on Full Stack Development and AI."
-}
+# {
+#   "token": "3c4489be632beb1973bfde92cbc42a61540a7d6aae05569ca854aa8d59fd43cb6e5ddb70c3b95e271834ded946a1d9b58c793c19c27809b2c0725941ad2a4001",
+#   "school": "MIT WPU",
+#   "degree": "Master of Computer Applications",
+#   "fieldOfStudy": "Computer Science",
+#   "startDate": "2025-08-01",
+#   "endDate": "2027-05-31",
+#   "grade": "8.9 CGPA",
+#   "description": "Focused on Full Stack Development and AI."
+# }

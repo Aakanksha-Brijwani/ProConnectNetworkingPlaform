@@ -48,7 +48,7 @@ export default function NavBarComponent() {
               }}
               className={styles.buttonJoin}
             >
-              <p>Be a part</p>
+              <p>Join Now</p>
             </div>
           )}
         </div>
